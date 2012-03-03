@@ -1,7 +1,7 @@
 package test;
 
 /**
- * Bookshelf class to manage bookshelf operations
+ * Bookshelf class to manage bookshelf operations.
  */
 public class Bookshelf {
 
@@ -31,12 +31,9 @@ public class Bookshelf {
 		if ((connectObject.countRowsWithTwoValues(bookID, userID, database, bookUserTable,
 				bookIDColumn, userIDColumn)) <= 0) {
 
-	    	// create a new entry in the book_user table with the bookID
-	    	connectObject.addIntToDB(bookID, database, bookUserTable, bookIDColumn);
-
-	    	// update the same row by adding the userID
-	    	connectObject.intUpdateTable(userID, bookIDColumn, bookID, database, bookUserTable, 
-					  userIDColumn);
+	    	// create a new entry in the book_user table with the bookID and userID
+	    	connectObject.addTwoIntsToDB(bookID, userID, database, bookUserTable, 
+	    			bookIDColumn, userIDColumn);
 		}
 
     	// set the entry's active status to true
@@ -48,5 +45,15 @@ public class Bookshelf {
 	// method to dissassociate a user with a book
 	public void removeBookFromShelf(int bookID, String username) {
 		
+		// create a connect object
+		DBConnect connectObject = new DBConnect();
+		
+		// retrieve the user's id given the username
+		int userID = connectObject.retrieveIntWithString(username, database, userTable, 
+				usernameColumn, userIDColumn);
+		
+		// set the entry's active status to false
+		connectObject.updateBoolStatus(userID, bookID, userIDColumn, bookIDColumn, database,
+				bookUserTable, boolColumn, false);
 	}
 } // end class Bookshelf

@@ -7,17 +7,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 /**
- * SubmitBook class to process book entry submissions
+ * SubmitBook class servlet to process book entry submissions.
  */
 @WebServlet("/submitabook")
 public class SubmitBook extends HttpServlet {
 
-	  /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	// create book object
-	  Book book = new Book();
+	  // create book object
+	  private Book book = new Book();
 	  
 	  // doGet method
 	  public void doGet(HttpServletRequest request, HttpServletResponse response) 

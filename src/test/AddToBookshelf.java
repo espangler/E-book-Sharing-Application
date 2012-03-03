@@ -6,15 +6,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 /**
- * AddToBookshsef class to
+ * AddToBookshelf servlet to retrieve and process form information related to adding
+ * a book to a user's shelf.
  */
 @WebServlet("/addtoshelf")
 public class AddToBookshelf extends HttpServlet {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
 	// doGet method
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 

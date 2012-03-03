@@ -46,7 +46,6 @@
 				    <% myBookBean.setAuthorLast(counter); %>
 				    <% myBookBean.setGenre(counter); %>
 					
-					<% counter--; %>		
 					<div id = "entry">
 					<h2>New Book <%= i %> </h2>
 					<div id="heading">Title: </div><%= myBookBean.getTitle() %><br>
@@ -54,6 +53,7 @@
 											<%= myBookBean.getAuthorLast() %><br>
 					<div id="heading">Genre: </div><%= myBookBean.getGenre() %><br>
 					</div><br>
+					<% counter--; %>
 				<% } %>
 			<% } else { %>
 				<br>

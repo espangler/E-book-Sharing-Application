@@ -1,7 +1,7 @@
 package test;
 
 /**
- * Book class to
+ * Book class to define and implement book related operations
  */
 public class Book {
 	

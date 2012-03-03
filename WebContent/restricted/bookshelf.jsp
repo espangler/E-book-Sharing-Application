@@ -21,7 +21,7 @@
 			<li><a href="books.jsp"><img src="../images/nav02a.gif" BORDER="0"></a></li>
 			<li><a href="bookshelf.jsp"><img src="../images/nav05b.gif" BORDER="0"></a></li>
 			<li><a href="submitbook.jsp"><img src="../images/nav06a.gif" BORDER="0"></a></li>
-			<li><a href="logout.jsp"><img src="../images/nav07a.gif" BORDER="0"></a></li>
+			<li><a href="../logout"><img src="../images/nav07a.gif" BORDER="0"></a></li>
 		</ul>
 	</div>
 	<div id="content">
@@ -57,7 +57,7 @@
 							<div id="heading">Genre: </div><%= myBookBean.getGenre() %><br><br>
 							<% counter++; %>
 							<FORM ACTION="../removefromshelf" METHOD="POST">
-							<input type="checkbox" name="remove" value="<%= i %>">
+							<input type="checkbox" name="remove" value=<%= i %>>
 							Remove this book from my shelf.<br>
 							<input type="submit" value="Remove">
 			   				</FORM>

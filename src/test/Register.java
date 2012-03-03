@@ -7,17 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 /**
- * Register class to process registration
+ * Register servlet to process registration.
  */
 @WebServlet("/registration")
 public class Register extends HttpServlet {
 	  
-	  /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	// doGet method checks that values entered are not null and available
+	  // doGet method checks that values entered are not null and available
 	  // if not, forwards to a registration page displaying a relevant error message
 	  // if values are good, the user's information is added to the database
 	  public void doGet(HttpServletRequest request, HttpServletResponse response) 

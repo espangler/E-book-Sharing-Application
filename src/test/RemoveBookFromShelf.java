@@ -6,15 +6,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 /**
- * AddToBookshsef class to
+ * RemoveBookFromShelf servlet to process form data related to removing a 
+ * book from a user's shelf.
  */
 @WebServlet("/removefromshelf")
 public class RemoveBookFromShelf extends HttpServlet {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
 	// doGet method
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -48,5 +44,5 @@ public class RemoveBookFromShelf extends HttpServlet {
 		doGet(request, response);
 	} // end doPost
 	
-} // end class AddToBookshelf
+} // end class RemoveBookFromShelf
 

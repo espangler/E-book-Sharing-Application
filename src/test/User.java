@@ -1,7 +1,7 @@
 package test;
 
 /**
- * User class to 
+ * User class to manage user operations.
  */
 public class User {
 

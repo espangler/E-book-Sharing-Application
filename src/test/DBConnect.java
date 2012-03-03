@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * DBConnect class to allow interactions with the database
+ * DBConnect class to allow and manage interactions with the database.
  */
 public class DBConnect {
 	
@@ -148,6 +148,18 @@ public class DBConnect {
 		  executeUpdate(updateString, database);
 	  } // end addIntToDB
 	  
+	  // method to add an int to a table
+	  public void addTwoIntsToDB(int intToAdd1, int intToAdd2, String database, String table, 
+			  String intCol1, String intCol2)
+	  {
+		  // prepare string to pass to the update method
+		  String updateString = ("insert into " + table + " (" + intCol1 + ", " + 
+	            		intCol2 + ") values (" + intToAdd1 +", " + intToAdd2 + ")");
+			 
+		  // execute the update
+		  executeUpdate(updateString, database);
+	  } // end addIntToDB
+	  
 	  // method to update a table with an int
 	  public void intUpdateTable(int updateInt, String keyColumn, int key, 
 			  String database, String table, String tableColumn)
@@ -193,6 +205,23 @@ public class DBConnect {
 	  } // end countRows
 	
 	  public int countRowsWithTwoValues(int value1, int value2, String database, 
+			  String table, String column1, String column2) 
+	  {
+		  int rowCount = -1;
+		  String countColumn = "count(*)";
+		  
+		  // prepare string to pass to the update method
+		  String queryString = ("select count(*) from " + table + " where " +
+				  column1 + "=" + value1 + " and " + column2 + "=" + value2);
+		  
+		  // execute query
+		  rowCount = executeQueryReturnInt(queryString, database, countColumn);
+		  
+	      // return rowCount
+		  return rowCount;
+	  } // end countRows
+	  
+	  public int countRowsWithBoolValues(int value1, boolean value2, String database, 
 			  String table, String column1, String column2) 
 	  {
 		  int rowCount = -1;

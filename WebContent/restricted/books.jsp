@@ -21,7 +21,7 @@
 			<li><a href="books.jsp"><img src="../images/nav02b.gif" BORDER="0"></a></li>
 			<li><a href="bookshelf.jsp"><img src="../images/nav05a.gif" BORDER="0"></a></li>
 			<li><a href="submitbook.jsp"><img src="../images/nav06a.gif" BORDER="0"></a></li>
-			<li><a href="logout.jsp"><img src="../images/nav07a.gif" BORDER="0"></a></li>
+			<li><a href="../logout"><img src="../images/nav07a.gif" BORDER="0"></a></li>
 		</ul>
 	</div>
 	<div id="content">

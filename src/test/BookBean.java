@@ -1,7 +1,7 @@
 package test;
 
 /**
- * BookBean class to
+ * BookBean bean to allow jsp pages to use java code in package test.
  */
 public class BookBean {
 	
@@ -58,8 +58,8 @@ public class BookBean {
 	
 	// check how many books a user is associated with
 	public void setBookUserCount(int userID) {
-		bookUserCount = connectObject.countRowsWithValue(userID, database, bookUserTable, 
-				userIDColumn);
+		bookUserCount = connectObject.countRowsWithBoolValues(userID, true, database, bookUserTable, 
+				userIDColumn, activeStatusColumn);
 	}
 	
 	// find the title based on the bookID

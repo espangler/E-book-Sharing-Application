@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 /**
- * Filter class to
+ * Filter class to restrict access to member pages to logged in members
  */
 public class FilterClass implements Filter {
 	 protected FilterConfig filterConfig;

@@ -6,17 +6,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 /**
- * Login class to
+ * Login servlet to process data from the login form.
  */
 @WebServlet("/loginauth")
 public class Login extends HttpServlet {
 
-	  /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	public void doGet(HttpServletRequest request, HttpServletResponse response) 
+	  // doGet method
+	  public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	  		throws ServletException, IOException {
 		  response.setContentType("text/html");
 	    
