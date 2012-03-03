@@ -1,0 +1,129 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+	
+body { 
+	font: 70% georgia, sans-serif;
+	line-height: 1.5;
+	color: #black; 
+	background-color: #FFFFFF; 
+	background: transparent url("images/bg2.gif") top; 
+	background-repeat: repeat-x;
+	margin: 0;  
+	padding: 0;
+}
+	
+#container
+{
+	margin: 0 auto;
+	width: 100%;
+	background:#clear;
+}
+
+#header
+{
+	background:#clear;
+	padding: 46.22px;
+	background: transparent url("images/logo.gif") no-repeat top left;
+}
+
+#header h1 { 
+	margin: 0; 
+}
+
+#header h1 span {
+	display:none
+}
+
+#navigation
+{
+	float: left;
+	width: 700px;
+	background:#clear;
+}
+
+#navigation ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul li
+{
+	list-style-type: none;
+	display: inline;
+}
+
+#navigation li a
+{
+	display: inline;
+	float: left;
+	padding: 0px 0px;
+	color:#clear;
+	text-decoration: none;
+}
+
+#content
+{
+	clear: left;
+	padding: 25px;
+	font-size: 9pt;
+}
+
+#heading
+{
+	color: purple;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+#text
+{
+	font-size: 10pt;	
+}
+
+#entry
+{
+	width: 75%;
+	font-size: 10pt;
+	background-color: #cccccc;
+	padding: 10px;
+}
+
+#errorText
+{
+	font-size: 10pt;
+	color: red;	
+}
+
+#content h2
+{
+	color:#000;
+	margin: 0 0 .5em;
+}
+
+#text h2
+{
+	font-size: 12pt;
+}
+
+#text h3
+{
+	color: purple;
+	font-size: 9pt;	
+}
+
+#footer h1
+{
+	text-align: center;
+	background: transparent url("images/bg3.gif");
+	background-repeat: repeat-x;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	margin: 0;
+	padding: 20px;
+	height: 1%;
+	font: 95% georgia, sans-serif;
+}

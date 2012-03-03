@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <servlet>
+    <description>Login</description>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/ebook-app/loginauth</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Testing Connection to MySQL</description>
+    <servlet-name>DBtest</servlet-name>
+    <servlet-class>DBtest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DBtest</servlet-name>
+    <url-pattern>/ebook-app/test</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>FilterClass</filter-name>
+    <filter-class>helper.FilterClass</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterClass</filter-name>
+    <url-pattern>/restricted/*</url-pattern>
+  </filter-mapping>
+</web-app>
